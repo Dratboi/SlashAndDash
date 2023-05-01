@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aedb4fc6e1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <!-- Adding smooth scrolling to all links -->
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- navbar start -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#home">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Nikhil Garg</div>
+                <div class="text-3">And I'm a <span class="typing"></span></div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="text">In need of a passionate game designer or simply want to find out more?</div>
+                <div class="card">
+                    <a href="mailto:niku110902@gmail.com">
+                        <div class="box">
+                            <i class="fas fa-at"></i>Email Me
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.linkedin.com/in/nikhilgarg119/">
+                        <div class="box">
+                            <i class="fab fa-linkedin"></i>LinkedIn
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://twitter.com/Nikhil11_twts?t=gZ46tA10oJcGwB1rHaEMvQ&s=09">
+                        <div class="box">
+                            <i class="fab fa-twitter"></i>Twitter
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.instagram.com/nikhil11_insta?r=nametag">
+                        <div class="box">
+                            <i class="fab fa-square-instagram"></i>Instagram
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <span class="text">Nikhil Garg</span> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
